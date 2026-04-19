@@ -41,8 +41,10 @@ body{background:#f4f3ef;color:var(--text);font-family:var(--font-body);font-size
 .card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;gap:6px}
 .card-name{font-size:13px;font-weight:600;color:var(--text);line-height:1.3}
 .card-amount{font-size:17px;font-weight:600;color:var(--green-mid);margin-bottom:6px}
-.card-row{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
+.card-row{display:flex;justify-content:space-between;align-items:center;margin-top:5px}
 .card-label{font-size:11px;color:var(--muted)}
+.card-val{font-size:11px;font-weight:500;color:var(--text)}
+.card-divider{height:0.5px;background:var(--border);margin:8px 0}
 .badge{display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;white-space:nowrap}
 .b-urgent{background:var(--red-light);color:var(--red-text)}
 .b-soon{background:var(--amber-light);color:var(--amber-text)}
@@ -86,7 +88,16 @@ tr:hover td{background:#fafaf8}
 .top3-rank{font-size:18px;font-weight:700;margin-bottom:4px}
 .top3-prop{font-size:11px;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:4px}
 .top3-leads{font-size:20px;font-weight:700;color:var(--green-mid)}
-.top3-sub{font-size:10px;color:var(--muted)}
+
+/* OPEN FORUM */
+.forum{background:var(--green-dark);border-radius:16px;padding:36px 40px;margin-bottom:0}
+.forum-title{font-family:var(--font-head);font-size:28px;color:#fff;margin-bottom:8px}
+.forum-sub{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:28px}
+.forum-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.forum-item{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 16px}
+.forum-item-title{font-size:12px;font-weight:600;color:#6ee7b7;margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+.forum-item-text{font-size:12px;color:rgba(255,255,255,.65);line-height:1.5}
+
 .footer{text-align:center;margin-top:48px;font-size:11px;color:var(--muted);padding-top:24px;border-top:1px solid var(--border)}
 </style>
 </head>
@@ -109,6 +120,7 @@ tr:hover td{background:#fafaf8}
     <span class="pill"><span class="pill-num">03</span>FUB lead tracker</span>
     <span class="pill"><span class="pill-num">04</span>Team numbers</span>
     <span class="pill"><span class="pill-num">05</span>Facebook performance</span>
+    <span class="pill"><span class="pill-num">06</span>Open forum</span>
   </div>
 </div>
 
@@ -125,8 +137,11 @@ tr:hover td{background:#fafaf8}
     <div class="card card-urgent">
       <div class="card-top"><div class="card-name">Darrell Blake</div><span class="badge b-urgent">Apr 20</span></div>
       <div class="card-amount">$19,405</div>
-      <div class="card-row"><span class="card-label">Realtor</span><span style="font-size:11px;font-weight:500">Bambi</span></div>
+      <div class="card-divider"></div>
+      <div class="card-row"><span class="card-label">Property</span><span class="card-val">5 ac — Waco, Carroll, GA</span></div>
       <div class="card-row"><span class="card-label">Type</span><span class="badge b-realtor">Realtor deal</span></div>
+      <div class="card-row"><span class="card-label">Acq manager</span><span class="card-val">Sara</span></div>
+      <div class="card-row"><span class="card-label">Seller</span><span class="card-val">Mohammed Haque</span></div>
     </div>
   </div>
 
@@ -135,18 +150,31 @@ tr:hover td{background:#fafaf8}
     <div class="card">
       <div class="card-top"><div class="card-name">Julio Gracia</div><span class="badge b-soon">Apr 27</span></div>
       <div class="card-amount">$33,500</div>
-      <div class="card-row"><span class="card-label">Type</span><span class="badge b-lml">LML direct</span></div>
+      <div class="card-divider"></div>
+      <div class="card-row"><span class="card-label">Property</span><span class="card-val">5.29 ac — Los Fresnos, Cameron, TX</span></div>
+      <div class="card-row"><span class="card-label">Source</span><span class="badge b-realtor">FB Marketplace</span></div>
+      <div class="card-row"><span class="card-label">Type</span><span class="badge b-lml">LML owned</span></div>
+      <div class="card-row"><span class="card-label">Acq manager</span><span class="card-val">Ben</span></div>
+      <div class="card-row"><span class="card-label">Internal sales</span><span class="card-val">Shaun</span></div>
     </div>
     <div class="card">
       <div class="card-top"><div class="card-name">Noe Valdez</div><span class="badge b-soon">Apr 28</span></div>
       <div class="card-amount">$36,000</div>
-      <div class="card-row"><span class="card-label">Type</span><span class="badge b-lml">LML direct</span></div>
+      <div class="card-divider"></div>
+      <div class="card-row"><span class="card-label">Property</span><span class="card-val">5 ac — Los Fresnos, Cameron, TX</span></div>
+      <div class="card-row"><span class="card-label">Source</span><span class="badge b-realtor">FB Marketplace</span></div>
+      <div class="card-row"><span class="card-label">Type</span><span class="badge b-lml">LML owned</span></div>
+      <div class="card-row"><span class="card-label">Acq manager</span><span class="card-val">Ben</span></div>
+      <div class="card-row"><span class="card-label">Internal sales</span><span class="card-val">Shaun</span></div>
     </div>
     <div class="card">
       <div class="card-top"><div class="card-name">Hai Nguyen</div><span class="badge b-soon">Apr 29</span></div>
       <div class="card-amount">$12,980</div>
-      <div class="card-row"><span class="card-label">Realtor</span><span style="font-size:11px;font-weight:500">Niky</span></div>
+      <div class="card-divider"></div>
+      <div class="card-row"><span class="card-label">Property</span><span class="card-val">1.5 ac — Liberty, Liberty, TX</span></div>
       <div class="card-row"><span class="card-label">Type</span><span class="badge b-realtor">Realtor deal</span></div>
+      <div class="card-row"><span class="card-label">Acq manager</span><span class="card-val">Sara</span></div>
+      <div class="card-row"><span class="card-label">Seller</span><span class="card-val">Jose Luis Hernandez</span></div>
     </div>
   </div>
 
@@ -265,19 +293,19 @@ tr:hover td{background:#fafaf8}
       <div class="top3-rank" style="color:#f59e0b">&#9312;</div>
       <div class="top3-prop">1.72 ac — Oakhurst, San Jacinto, TX</div>
       <div class="top3-leads">4 <span style="font-size:11px;font-weight:400;color:var(--muted)">leads</span></div>
-      <div class="top3-sub"><span class="badge b-realtor">FB Marketplace</span></div>
+      <div><span class="badge b-realtor" style="font-size:10px">FB Marketplace</span></div>
     </div>
     <div class="top3-card" style="border-top:3px solid #9ca3af">
       <div class="top3-rank" style="color:#9ca3af">&#9313;</div>
       <div class="top3-prop">10 ac — Duncanville, Tuscaloosa, AL</div>
       <div class="top3-leads">4 <span style="font-size:11px;font-weight:400;color:var(--muted)">leads</span></div>
-      <div class="top3-sub"><span class="badge b-ok">FB Groups</span></div>
+      <div><span class="badge b-ok" style="font-size:10px">FB Groups</span></div>
     </div>
     <div class="top3-card" style="border-top:3px solid #b45309">
       <div class="top3-rank" style="color:#b45309">&#9314;</div>
       <div class="top3-prop">3.2 ac — Stockton, Baldwin, AL</div>
       <div class="top3-leads">3 <span style="font-size:11px;font-weight:400;color:var(--muted)">leads</span></div>
-      <div class="top3-sub"><span class="badge b-realtor">FB Marketplace</span></div>
+      <div><span class="badge b-realtor" style="font-size:10px">FB Marketplace</span></div>
     </div>
   </div>
   <div class="note note-warn">Lead volume dropped to 34 last week vs 60–70 the two prior weeks. FB Groups held steady at 18 — FB Marketplace dropped from 51 to 13. Land.com at 0 across the last two weeks — worth evaluating this channel.</div>
@@ -369,6 +397,33 @@ tr:hover td{background:#fafaf8}
     </table>
   </div>
   <div class="note note-warn" style="margin-top:8px">Lead volume dropped last week — spend was cut by two-thirds. Discuss if intentional. Conversion hit 45%, the closest to the 50% target yet. Land.com produced 1 lead total across all tracked weeks — worth evaluating.</div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 06 OPEN FORUM -->
+<div class="forum">
+  <div class="cover-eyebrow" style="margin-bottom:10px">Section 06</div>
+  <div class="forum-title">Open Forum</div>
+  <div class="forum-sub">Team discussion — questions, updates, and preparing for the week ahead</div>
+  <div class="forum-items">
+    <div class="forum-item">
+      <div class="forum-item-title">Questions & answers</div>
+      <div class="forum-item-text">Open floor for any questions on the numbers, deals, or priorities discussed today</div>
+    </div>
+    <div class="forum-item">
+      <div class="forum-item-title">Team updates</div>
+      <div class="forum-item-text">Any updates, blockers, or wins from each team member not covered in the numbers</div>
+    </div>
+    <div class="forum-item">
+      <div class="forum-item-title">Issues & concerns</div>
+      <div class="forum-item-text">Raise anything that needs attention before it becomes a bigger problem</div>
+    </div>
+    <div class="forum-item">
+      <div class="forum-item-title">Week ahead</div>
+      <div class="forum-item-text">Priorities, focus areas, and what each team member is owning this week</div>
+    </div>
+  </div>
 </div>
 
 <div class="footer">
